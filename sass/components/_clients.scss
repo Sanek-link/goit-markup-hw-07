@@ -1,0 +1,38 @@
+/* Постоянные клиенты */
+.clients {
+  @extend %section;
+}
+
+.clients-list {
+  @extend %list;
+  display: flex;
+
+  &-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clients-link {
+  @include centered($display: inline-flex);
+  width: 170px;
+  height: 90px;
+  border: 1px solid $icon-base-color;
+  border-radius: 4px;
+  color: $icon-base-color;
+  transition: border 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.clients-icon {
+  fill: $icon-base-color;
+  transition: fill 250ms $timing-function;
+
+  .clients-link:hover &,
+  .clients-link:focus & {
+    fill: $accent-color;
+  }
+}

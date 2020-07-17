@@ -1,0 +1,126 @@
+/* Подвал */
+.footer {
+  background-color: $footer-background-color;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 45px;
+  padding-bottom: 28px;
+}
+
+/* Логотип в подвале */
+.footer-logo {
+  color: $second-titles-color;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.18;
+  margin-bottom: 8px;
+
+  & .accent {
+    color: $accent-color;
+  }
+}
+
+/* Адрес */
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.address > p {
+  color: $second-titles-color;
+}
+
+.address > a {
+  color: $address-color;
+
+  &:not(:last-child) {
+    display: inline-block;
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+}
+
+/* Присоединяйтесь и Подпишитесь*/
+.appeal {
+  color: $second-titles-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.join-list {
+  @extend %list;
+  display: flex;
+}
+
+.join-list-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  & > a {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.join-icon {
+  fill: $second-titles-color;
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-input {
+  width: 358px;
+  background-color: transparent;
+  outline: transparent;
+  padding: 15px 16px;
+  margin-right: 12px;
+  font-size: 16px;
+  line-height: 1.25;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.subscribe-btn {
+  @include centered($display: inline-flex);
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @extend %button;
+}
+
+.subscribe-icon {
+  margin-left: 10px;
+}
+
+/* Developed */
+.developed {
+  padding-top: 18px;
+  padding-bottom: 21px;
+
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+}

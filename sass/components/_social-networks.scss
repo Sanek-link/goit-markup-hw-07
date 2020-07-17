@@ -1,0 +1,25 @@
+/* Иконки социальных сетей */
+.social-networks {
+  @include centered($display: inline-flex);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  transition: background-color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.team-icon {
+  fill: $icon-base-color;
+  transition: fill 250ms $timing-function;
+
+  .social-networks:hover &,
+  .social-networks:focus & {
+    fill: $second-titles-color;
+  }
+}

@@ -1,0 +1,41 @@
+/* Чем мы занимаемся */
+.products {
+  @extend %section-no-padding;
+  padding-bottom: 94px;
+}
+
+.products-list {
+  @extend %list;
+  display: flex;
+}
+
+.products-list-item {
+  position: relative;
+  width: 370px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.products-list-item img {
+  display: block;
+}
+
+.products-name {
+  position: absolute;
+  bottom: 0;
+
+  width: 370px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  color: $second-titles-color;
+  background-color: $products-background-color;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+}
